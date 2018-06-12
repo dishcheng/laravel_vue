@@ -43630,12 +43630,67 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            msg: 'This is a Laravel with Vue and Element Demo.'
+            msg: 'This is a Laravel wh Vue and Element Demo.',
+            bool: false,
+            todos: [{ text: "1" }, { text: "2" }, { text: "3" }, { text: "4" }],
+            bindMessage: "",
+            htmlMessage: '<p class="hello">html content</p>',
+            computedMsg: '',
+            firstName: 'Cai',
+            lastName: 'Cheng'
         };
+    },
+
+
+    methods: {
+        reverseMessage: function reverseMessage() {
+            return this.msg = this.msg.split('').reverse().join('');
+        }
+    },
+
+    computed: {
+        computedMsgFunc: function computedMsgFunc() {
+            return this.computedMsg = this.firstName + this.lastName;
+        }
     }
 });
 
@@ -43648,9 +43703,79 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", [_vm._v("Hello, Larvuent!")]),
+    _c("h3", [_vm._v("隐藏")]),
     _vm._v(" "),
-    _c("p", { staticClass: "hello" }, [_vm._v(_vm._s(_vm.msg))])
+    _vm.bool
+      ? _c("p", { staticClass: "hello" }, [_vm._v(_vm._s(_vm.msg))])
+      : _vm._e(),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("h3", [_vm._v("列表")]),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.todos, function(todo) {
+        return _c("li", [
+          _vm._v("\n            " + _vm._s(todo.text) + "\n        ")
+        ])
+      })
+    ),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("h3", [_vm._v("翻转")]),
+    _vm._v(" "),
+    _c("p", { staticClass: "hello" }, [_vm._v(_vm._s(_vm.msg))]),
+    _vm._v(" "),
+    _c("h3", { on: { click: _vm.reverseMessage } }, [_vm._v("翻转信息")]),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("h3", [_vm._v("双向绑定")]),
+    _vm._v(" "),
+    _c("p", [_vm._v(_vm._s(_vm.bindMessage))]),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.bindMessage,
+          expression: "bindMessage"
+        }
+      ],
+      attrs: { type: "text" },
+      domProps: { value: _vm.bindMessage },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.bindMessage = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("h3", [_vm._v("原始html渲染")]),
+    _vm._v(" "),
+    _c("p", [_vm._v(_vm._s(_vm.htmlMessage))]),
+    _vm._v(" "),
+    _c("span", { domProps: { innerHTML: _vm._s(_vm.htmlMessage) } }),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("button", { attrs: { disabled: _vm.bool } }, [_vm._v("Button")]),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("h3", [_vm._v("计算属性")]),
+    _vm._v(" "),
+    _c("p", [_vm._v('origin message:"' + _vm._s(_vm.computedMsg) + '"')]),
+    _vm._v(" "),
+    _c("p", [_vm._v("after message:" + _vm._s(_vm.computedMsgFunc))])
   ])
 }
 var staticRenderFns = []
