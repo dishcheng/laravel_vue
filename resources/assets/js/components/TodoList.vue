@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input type="text" v-model="inputValue"/>
+        <input class="colorStyle" type="text" v-model="inputValue"/>
         <button v-on:click="handleSubmit">提交</button>
 
         <ul>
@@ -45,6 +45,9 @@
     }
 </script>
 
+<!--scoped 标识仅仅在本组件中生效，去掉scoped全局生效-->
 <style scoped>
-
+    .colorStyle{
+        color:red
+    }
 </style>

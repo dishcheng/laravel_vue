@@ -46760,7 +46760,7 @@ exports = module.exports = __webpack_require__(47)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.colorStyle[data-v-0abc7e7b]{\n    color:red\n}\n", ""]);
 
 // exports
 
@@ -46838,6 +46838,7 @@ var render = function() {
           expression: "inputValue"
         }
       ],
+      staticClass: "colorStyle",
       attrs: { type: "text" },
       domProps: { value: _vm.inputValue },
       on: {
@@ -46960,7 +46961,7 @@ exports = module.exports = __webpack_require__(47)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.colorStyle[data-v-00b70670]{\n    color:darkmagenta;\n}\n", ""]);
 
 // exports
 
@@ -46995,9 +46996,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("li", { on: { click: _vm.handleDelete } }, [
-    _vm._v(_vm._s(_vm.content) + "-" + _vm._s(_vm.index))
-  ])
+  return _c(
+    "li",
+    { staticClass: "colorStyle", on: { click: _vm.handleDelete } },
+    [_vm._v(_vm._s(_vm.content) + "-" + _vm._s(_vm.index))]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

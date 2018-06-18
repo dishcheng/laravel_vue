@@ -1,5 +1,5 @@
 <template>
-    <li @click='handleDelete'>{{content}}-{{index}}</li>
+    <li class="colorStyle" @click='handleDelete'>{{content}}-{{index}}</li>
 </template>
 
 <script>
@@ -16,5 +16,7 @@
 </script>
 
 <style scoped>
-
+    .colorStyle{
+        color:darkmagenta;
+    }
 </style>
