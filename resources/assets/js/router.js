@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Example  from './components/ExampleComponent.vue';
 import Hello from './components/Hello.vue';
+import TodoList from './components/TodoList.vue';
 Vue.use(Router);
 
 export default new Router({
@@ -14,6 +15,11 @@ export default new Router({
             path: '/example',
             name:'example',
             component: Example
+        },
+        {
+            path: '/todoList',
+            name:'TodoList',
+            component: TodoList
         },
         // {
         //     path: '/admin',
