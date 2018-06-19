@@ -61,6 +61,27 @@
 
         <p>v-show(基于 CSS 进行切换)</p>
         <h4 v-show="rand < 0.5">随机数{{rand}}小于0.5</h4>
+
+        <hr>
+        <p>内联 JavaScript 语句中调用方法</p>
+        <h4 @click="doAlert('hi')">say hi</h4>
+        <h4 @click="doAlert('hello')">say hello</h4>
+
+        <hr>
+        <h1>表单</h1>
+        <h4>多选框</h4>
+        <div id='example-3'>
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames">
+            <label for="john">John</label>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+            <label for="mike">Mike</label>
+            <br>
+            <span>Checked names:
+                <span>{{ checkedNames }}</span>
+            </span>
+        </div>
     </div>
 </template>
 
@@ -82,13 +103,17 @@
                 firstName: 'Cai',
                 lastName: 'Cheng',
                 bool2: true,
-                rand: Math.random()
+                rand: Math.random(),
+                checkedNames: [],
             }
         },
 
         methods: {
             reverseMessage: function () {
                 return this.msg = this.msg.split('').reverse().join('')
+            },
+            doAlert: function (message) {
+                return alert(message)
             }
         },
 
