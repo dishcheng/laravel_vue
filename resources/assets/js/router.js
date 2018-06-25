@@ -5,6 +5,7 @@ import Hello from './components/Hello.vue';
 import TodoList from './components/TodoList.vue';
 import DataFromApi from './components/DataFromApi.vue';
 import PostData from './components/PostData.vue';
+import Transition from './components/Transitions.vue';
 Vue.use(Router);
 
 export default new Router({
@@ -32,6 +33,11 @@ export default new Router({
             path: '/PostData',
             name:'PostData',
             component: PostData
+        },
+        {
+            path: '/Transition',
+            name:'Transition',
+            component: Transition
         },
         // {
         //     path: '/admin',
