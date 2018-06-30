@@ -105,6 +105,8 @@
                 bool2: true,
                 rand: Math.random(),
                 checkedNames: [],
+            //    watch需要先定义
+                fullname:"",
             }
         },
 
@@ -117,11 +119,24 @@
             }
         },
 
+        //有缓存，除非变更，否则不会修改值
+        //methods也可以实现，但是每次都会从新计算，不管依赖的值变没变
+        //watch监听也可以实现，但是实现起来复杂
         computed: {
             computedMsgFunc: function () {
+                console.log('计算了一次');
                 return this.computedMsg = this.firstName + this.lastName
             }
-        }
+        },
+        // watch: {
+        //     firstName: function () {
+        //          this.fullname=this.firstname() +this.lastName()
+        //     },
+        //     lastName: function () {
+        //         this.fullname=this.firstname() +this.lastName()
+        //     }
+        // }
+
     }
 </script>
 

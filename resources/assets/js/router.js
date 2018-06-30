@@ -1,11 +1,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Example  from './components/ExampleComponent.vue';
+import Example from './components/ExampleComponent.vue';
 import Hello from './components/Hello.vue';
 import TodoList from './components/TodoList.vue';
 import DataFromApi from './components/DataFromApi.vue';
 import PostData from './components/PostData.vue';
 import Transition from './components/Transitions.vue';
+import VueHooook from './components/VueHooook.vue';
+import SetAndGet from './components/SetAndGet.vue';
+import StyleBind from './components/StyleBind.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -16,28 +20,43 @@ export default new Router({
         },
         {
             path: '/example',
-            name:'example',
+            name: 'example',
             component: Example
         },
         {
             path: '/todoList',
-            name:'TodoList',
+            name: 'TodoList',
             component: TodoList
         },
         {
             path: '/DataFromApi',
-            name:'DataFromApi',
+            name: 'DataFromApi',
             component: DataFromApi
         },
         {
             path: '/PostData',
-            name:'PostData',
+            name: 'PostData',
             component: PostData
         },
         {
             path: '/Transition',
-            name:'Transition',
+            name: 'Transition',
             component: Transition
+        },
+        {
+            path: '/VueHooook',
+            name: 'VueHooook',
+            component: VueHooook
+        },
+        {
+            path: '/setAndGet',
+            name: 'setAndGet',
+            component: SetAndGet
+        },
+        {
+            path: '/StyleBind',
+            name: 'StyleBind',
+            component: StyleBind
         },
         // {
         //     path: '/admin',
