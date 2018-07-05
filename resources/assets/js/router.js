@@ -9,6 +9,7 @@ import Transition from './components/Transitions.vue';
 import VueHooook from './components/VueHooook.vue';
 import SetAndGet from './components/SetAndGet.vue';
 import StyleBind from './components/StyleBind.vue';
+import Form from './components/Form.vue';
 
 Vue.use(Router);
 
@@ -57,6 +58,11 @@ export default new Router({
             path: '/StyleBind',
             name: 'StyleBind',
             component: StyleBind
+        },
+        {
+            path: '/form',
+            name: 'Form',
+            component: Form
         },
         // {
         //     path: '/admin',
