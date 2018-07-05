@@ -10,6 +10,8 @@ import VueHooook from './components/VueHooook.vue';
 import SetAndGet from './components/SetAndGet.vue';
 import StyleBind from './components/StyleBind.vue';
 import Form from './components/Form.vue';
+import Directive from './components/Directive.vue';
+import Redirect from './components/Redirect.vue';
 
 Vue.use(Router);
 
@@ -21,7 +23,7 @@ export default new Router({
         },
         {
             path: '/example',
-            name: 'example',
+            name: 'example',//别名
             component: Example
         },
         {
@@ -63,6 +65,16 @@ export default new Router({
             path: '/form',
             name: 'Form',
             component: Form
+        },
+        {
+            path: '/directive',
+            name: 'Directive',
+            component: Directive
+        },
+        {
+            path: '/redirect',
+            name: 'redirect',
+            component: Redirect
         },
         // {
         //     path: '/admin',

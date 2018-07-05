@@ -4,7 +4,7 @@
 
         <h4>input</h4>
         <p>{{inputValue}}</p>
-        <input type="text" v-model="inputValue" placeholder="请填写">
+        <input type="text" v-model.lazy.trim.number="inputValue" placeholder="请填写">
         <hr>
 
         <h4>textarea</h4>
