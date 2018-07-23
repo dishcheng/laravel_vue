@@ -12,6 +12,9 @@ import StyleBind from './components/StyleBind.vue';
 import UseComponentDetail from './components/UseComponentDetail.vue';
 import Props from './components/Props.vue';
 import PropsValidator from './components/PropsValidator.vue';
+import Form from './components/Form.vue';
+import Directive from './components/Directive.vue';
+import Redirect from './components/Redirect.vue';
 
 Vue.use(Router);
 
@@ -78,6 +81,21 @@ export default new Router({
             path: '/propsValidator',
             name: 'propsValidator',
             component: PropsValidator
+        },
+        {
+            path: '/form',
+            name: 'Form',
+            component: Form
+        },
+        {
+            path: '/directive',
+            name: 'Directive',
+            component: Directive
+        },
+        {
+            path: '/redirect',
+            name: 'redirect',
+            component: Redirect
         },
         // {
         //     path: '/admin',
