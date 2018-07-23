@@ -18,7 +18,18 @@ window.Vue = require('vue');
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 import router from './router';//路由配置文件
 // Vue.use(VueRouter);
+
+
+//全局注册组件
+Vue.directive('focus', {
+    inserted: function (el) {
+        el.focus()
+    }
+});
+
+
 const app = new Vue({
     el: '#app',
     router
 });
+//全局指令
