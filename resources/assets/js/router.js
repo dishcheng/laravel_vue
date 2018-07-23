@@ -10,6 +10,8 @@ import VueHooook from './components/VueHooook.vue';
 import SetAndGet from './components/SetAndGet.vue';
 import StyleBind from './components/StyleBind.vue';
 import UseComponentDetail from './components/UseComponentDetail.vue';
+import Props from './components/Props.vue';
+import PropsValidator from './components/PropsValidator.vue';
 
 Vue.use(Router);
 
@@ -60,9 +62,22 @@ export default new Router({
             component: StyleBind
         },
         {
+            // 4.1
             path: '/UseComponentDetail',
             name: 'UseComponentDetail',
             component: UseComponentDetail
+        },
+        {
+            //4.2
+            path: '/props',
+            name: 'Props',
+            component: Props
+        },
+        {
+            //4.3
+            path: '/propsValidator',
+            name: 'propsValidator',
+            component: PropsValidator
         },
         // {
         //     path: '/admin',
