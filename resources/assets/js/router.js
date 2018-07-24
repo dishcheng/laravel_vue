@@ -17,6 +17,7 @@ import Directive from './components/Directive.vue';
 import Redirect from './components/Redirect.vue';
 import BindOriginEvent from './components/bindOriginEvent.vue';
 import BindOriginEvent2 from './components/bindOriginEvent2.vue';
+import Bus4_5 from './components/Bus4_5.vue';
 
 Vue.use(Router);
 
@@ -110,6 +111,12 @@ export default new Router({
             path: '/bindOriginEvent2',
             name: 'bindOriginEvent2',
             component: BindOriginEvent2
+        },
+        {
+            //4.5
+            path: '/Bus',
+            name: 'Bus',
+            component: Bus4_5
         },
         // {
         //     path: '/admin',
