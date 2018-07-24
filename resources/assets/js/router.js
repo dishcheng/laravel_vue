@@ -15,6 +15,8 @@ import PropsValidator from './components/PropsValidator.vue';
 import Form from './components/Form.vue';
 import Directive from './components/Directive.vue';
 import Redirect from './components/Redirect.vue';
+import BindOriginEvent from './components/bindOriginEvent.vue';
+import BindOriginEvent2 from './components/bindOriginEvent2.vue';
 
 Vue.use(Router);
 
@@ -96,6 +98,18 @@ export default new Router({
             path: '/redirect',
             name: 'redirect',
             component: Redirect
+        },
+        {
+            //4.4
+            path: '/bindOriginEvent',
+            name: 'bindOriginEvent',
+            component: BindOriginEvent
+        },
+        {
+            //4.4
+            path: '/bindOriginEvent2',
+            name: 'bindOriginEvent2',
+            component: BindOriginEvent2
         },
         // {
         //     path: '/admin',
