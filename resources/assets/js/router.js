@@ -18,6 +18,10 @@ import Redirect from './components/Redirect.vue';
 import BindOriginEvent from './components/bindOriginEvent.vue';
 import BindOriginEvent2 from './components/bindOriginEvent2.vue';
 import Bus4_5 from './components/Bus4_5.vue';
+import Slot from './components/Slot4_6.vue';
+import Slot_2 from './components/Slot4_6_2.vue';
+import Slot_3 from './components/Slot_4_7.vue';
+import componentOne from './components/Component_4_8.vue';
 
 Vue.use(Router);
 
@@ -117,6 +121,29 @@ export default new Router({
             path: '/Bus',
             name: 'Bus',
             component: Bus4_5
+        },
+        {
+            //4.6
+            path: '/slot',
+            name: 'Slot',
+            component: Slot
+        },
+        {
+            //4.6 2
+            path: '/slot_2',
+            name: 'Slot_2',
+            component: Slot_2
+        },
+        {
+            //4.7
+            path: '/slot_3',
+            name: 'Slot_3',
+            component: Slot_3
+        }, {
+            //4.8
+            path: '/componentOne',
+            name: 'componentOne',
+            component: componentOne
         },
         // {
         //     path: '/admin',
