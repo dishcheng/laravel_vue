@@ -5,7 +5,6 @@ import Hello from './components/Hello.vue';
 import TodoList from './components/TodoList.vue';
 import DataFromApi from './components/DataFromApi.vue';
 import PostData from './components/PostData.vue';
-import Transition from './components/Transitions.vue';
 import VueHooook from './components/VueHooook.vue';
 import SetAndGet from './components/SetAndGet.vue';
 import StyleBind from './components/StyleBind.vue';
@@ -22,6 +21,8 @@ import Slot from './components/Slot4_6.vue';
 import Slot_2 from './components/Slot4_6_2.vue';
 import Slot_3 from './components/Slot_4_7.vue';
 import componentOne from './components/Component_4_8.vue';
+import Transition from './components/Transition_5_1.vue';
+import Animate from './components/Animate_5_2.vue';
 
 Vue.use(Router);
 
@@ -50,11 +51,6 @@ export default new Router({
             path: '/PostData',
             name: 'PostData',
             component: PostData
-        },
-        {
-            path: '/Transition',
-            name: 'Transition',
-            component: Transition
         },
         {
             path: '/VueHooook',
@@ -144,6 +140,18 @@ export default new Router({
             path: '/componentOne',
             name: 'componentOne',
             component: componentOne
+        },
+        {
+            //5.1
+            path: '/transition',
+            name: 'Transition',
+            component: Transition
+        },
+        {
+            //5.2
+            path: '/animate',
+            name: 'animate',
+            component: Animate
         },
         // {
         //     path: '/admin',
