@@ -23,6 +23,10 @@ import Slot_3 from './components/Slot_4_7.vue';
 import componentOne from './components/Component_4_8.vue';
 import Transition from './components/Transition_5_1.vue';
 import Animate from './components/Animate_5_2.vue';
+import Animate2 from './components/Animate_5_2_2.vue';
+import Velocity from './components/Velocity_5_4';
+import Velocity2 from './components/Velocity_5_4_1';
+import MultipleTransition from './components/MultipleTransition_5_5';
 
 Vue.use(Router);
 
@@ -152,6 +156,30 @@ export default new Router({
             path: '/animate',
             name: 'animate',
             component: Animate
+        },
+        {
+            //5.2
+            path: '/animate2',
+            name: 'animate2',
+            component: Animate2
+        },
+        {
+            //5.4
+            path: '/Velocity',
+            name: 'Velocity',
+            component: Velocity
+        },
+        {
+            //5.4.1
+            path: '/Velocity2',
+            name: 'Velocity2',
+            component: Velocity2
+        },
+        {
+            //5.5.1
+            path: '/MultipleTransition',
+            name: 'MultipleTransition',
+            component: MultipleTransition
         },
         // {
         //     path: '/admin',
